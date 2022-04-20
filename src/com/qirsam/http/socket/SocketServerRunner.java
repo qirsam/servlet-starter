@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class SocketServerRunner {
     public static void main(String[] args) throws IOException {
@@ -12,8 +13,14 @@ public class SocketServerRunner {
              var socket = serverSocket.accept();
              var outputStream = new DataOutputStream(socket.getOutputStream());
              var inputStream = new DataInputStream(socket.getInputStream())) {
-            System.out.println("Client request: " + inputStream.readUTF());
-            outputStream.writeUTF("It is better to die for the Emperor then to live for yourself");
+            var request = inputStream.readUTF();
+            var scanner = new Scanner(System.in);
+            while (!"stop".equals(request)) {
+                System.out.println("Client request: " + request);
+                var responce = scanner.nextLine();
+                outputStream.writeUTF(responce);
+                request = inputStream.readUTF();
+            }
         }
     }
 }
