@@ -11,7 +11,7 @@ public class DatagramServerRunner {
             DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
             datagramServer.receive(packet);
 
-            System.out.println(new String(buffer));
+            System.out.println(new String(buffer)); 
         }
     }
 }

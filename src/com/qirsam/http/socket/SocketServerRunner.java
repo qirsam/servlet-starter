@@ -4,7 +4,6 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.Scanner;
 
 public class SocketServerRunner {
@@ -17,8 +16,8 @@ public class SocketServerRunner {
             var scanner = new Scanner(System.in);
             while (!"stop".equals(request)) {
                 System.out.println("Client request: " + request);
-                var responce = scanner.nextLine();
-                outputStream.writeUTF(responce);
+                var response = scanner.nextLine();
+                outputStream.writeUTF(response);
                 request = inputStream.readUTF();
             }
         }
