@@ -1,10 +1,7 @@
-package com.qirsam.http.socket.client;
+package com.qirsam.http.client;
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 
 public class UrlExample {
     public static void main(String[] args) throws IOException {
