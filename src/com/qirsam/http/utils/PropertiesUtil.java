@@ -1,10 +1,13 @@
 package com.qirsam.http.utils;
 
+import lombok.experimental.UtilityClass;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public final class PropertiesUtil {
+@UtilityClass
+public class PropertiesUtil {
 
     private static final Properties PROPERTIES = new Properties();
 
@@ -21,10 +24,8 @@ public final class PropertiesUtil {
         }
     }
 
-    private PropertiesUtil() {
-    }
 
-    public static String get(String key){
+    public static String get(String key) {
         return PROPERTIES.getProperty(key);
     }
 }
