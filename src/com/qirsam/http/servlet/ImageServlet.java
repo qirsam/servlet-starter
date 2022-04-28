@@ -27,7 +27,6 @@ public class ImageServlet extends HttpServlet {
                     writeImage(image, resp);
                 }, () -> resp.setStatus(404));
     }
-
     @SneakyThrows
     private void writeImage(InputStream image, HttpServletResponse resp) {
         try (image; var outputStream = resp.getOutputStream()) {

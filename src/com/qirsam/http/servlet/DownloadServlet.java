@@ -21,7 +21,9 @@ public class DownloadServlet extends HttpServlet {
         resp.setCharacterEncoding(StandardCharsets.UTF_8.name());
 
         try (var outputStream = resp.getOutputStream();
-             var inputStream = DownloadServlet.class.getClassLoader().getResourceAsStream("first.json")) {
+            var inputStream = DownloadServlet.class.getClassLoader().getResourceAsStream("first.json"))
+        {
+            assert inputStream != null;
             outputStream.write(inputStream.readAllBytes());
 
         }

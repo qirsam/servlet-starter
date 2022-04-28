@@ -70,7 +70,7 @@ public class FlightDao implements Dao<Long, Flight> {
         return INSTANCE;
     }
 
-    private Flight buildFlight(ResultSet resultSet) { //TODO: реализовать через паттерн билдер
+    private Flight buildFlight(ResultSet resultSet) {
         try {
             return new Flight(
                      resultSet.getObject("id", Long.class),
