@@ -1,4 +1,4 @@
-package com.qirsam.http.Filter;
+package com.qirsam.http.filter;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;

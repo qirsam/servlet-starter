@@ -38,11 +38,10 @@
         </c:forEach>
     </select><br>
     </label>
-    <c:forEach var="gender" items="${requestScope.genders}">
-        <label>
+    <label>
+            <c:forEach var="gender" items="${requestScope.genders}">
             <input type="radio" name="gender" value="${gender}">
-        </label> ${gender}
-        <br>
+    </label> ${gender}    <br>
     </c:forEach>
     <button type="submit">Send</button>
     <c:if test="${not empty requestScope.errors}">
