@@ -12,6 +12,9 @@
     <title>Title</title>
 </head>
 <body>
+<%--<img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">--%>
+<img src="${pageContext.request.contextPath} /images/users/1.jpg" alt="User Image">
+
 <form action="${pageContext.request.contextPath}/registration" method="post" enctype="multipart/form-data">
     <label for="name">Name:
         <input type="text" name="name" id="name">
