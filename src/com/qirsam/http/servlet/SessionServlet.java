@@ -9,7 +9,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/sessions")
+import static com.qirsam.http.utils.UrlPath.SESSIONS;
+
+@WebServlet(SESSIONS)
 public class SessionServlet extends HttpServlet {
 
     private static final String USER = "user";

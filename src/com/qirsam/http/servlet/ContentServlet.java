@@ -13,7 +13,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@WebServlet("/content")
+import static com.qirsam.http.utils.UrlPath.CONTENT;
+
+@WebServlet(CONTENT)
 public class ContentServlet extends HttpServlet {
 
     private final FlightService flightService = FlightService.getInstance();

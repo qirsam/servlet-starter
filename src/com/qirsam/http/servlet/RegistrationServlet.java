@@ -16,8 +16,11 @@ import jakarta.servlet.http.Part;
 
 import java.io.IOException;
 import java.util.List;
+
+import static com.qirsam.http.utils.UrlPath.REGISTRATION;
+
 @MultipartConfig(fileSizeThreshold = 1024 * 1024)
-@WebServlet(value = "/registration", name = "RegistrationServlet")
+@WebServlet(value = REGISTRATION, name = "RegistrationServlet")
 public class RegistrationServlet extends HttpServlet {
 
     private final UserService userService = UserService.getInstance();

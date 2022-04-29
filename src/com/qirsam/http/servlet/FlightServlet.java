@@ -12,7 +12,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 
-@WebServlet("/flights")
+import static com.qirsam.http.utils.UrlPath.FLIGHTS;
+
+@WebServlet(FLIGHTS)
 public class FlightServlet extends HttpServlet {
 
     private final FlightService flightService = FlightService.getInstance();

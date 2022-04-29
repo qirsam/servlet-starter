@@ -11,7 +11,9 @@ import lombok.SneakyThrows;
 import java.io.IOException;
 import java.io.InputStream;
 
-@WebServlet("/images/*")
+import static com.qirsam.http.utils.UrlPath.IMAGES;
+
+@WebServlet(IMAGES + "/*")
 public class ImageServlet extends HttpServlet {
 
     private final ImageService imageService = ImageService.getInstance();

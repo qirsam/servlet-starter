@@ -11,8 +11,10 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.qirsam.http.utils.UrlPath.COOKIES;
 
-@WebServlet("/cookies")
+
+@WebServlet(COOKIES)
 public class CookieServlet extends HttpServlet {
 
     private static final String UNIQUE_ID = "userId";

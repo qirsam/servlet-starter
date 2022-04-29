@@ -8,7 +8,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/logout") public class LogoutServlet extends HttpServlet {
+import static com.qirsam.http.utils.UrlPath.LOGOUT;
+
+@WebServlet(LOGOUT) public class LogoutServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

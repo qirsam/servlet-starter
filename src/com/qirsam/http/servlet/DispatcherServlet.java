@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 
-@WebServlet("/dispatcher")
+import static com.qirsam.http.utils.UrlPath.DISPATCHER;
+
+@WebServlet(DISPATCHER)
 public class DispatcherServlet extends HttpServlet {
 
     @Override

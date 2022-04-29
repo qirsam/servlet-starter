@@ -11,7 +11,9 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 
-@WebServlet("/download")
+import static com.qirsam.http.utils.UrlPath.DOWNLOAD;
+
+@WebServlet(DOWNLOAD)
 public class DownloadServlet extends HttpServlet {
 
     @Override

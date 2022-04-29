@@ -14,7 +14,9 @@ import java.util.Enumeration;
 import java.util.Map;
 import java.util.stream.Stream;
 
-@WebServlet("/first")
+import static com.qirsam.http.utils.UrlPath.FIRST;
+
+@WebServlet(FIRST)
 public class FirstServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
