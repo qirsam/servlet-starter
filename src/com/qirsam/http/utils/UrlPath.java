@@ -18,4 +18,5 @@ public class UrlPath {
     public static final String REGISTRATION = "/registration";
     public static final String SESSIONS = "/sessions";
     public static final String TICKETS = "/tickets";
+    public static final String LOCALE = "/locale";
 }

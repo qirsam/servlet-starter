@@ -36,7 +36,7 @@ public class FirstServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws   ServletException, IOException {
         try (var reader = req.getReader();
             var lines = reader.lines()) {
             lines.forEach(System.out::println);
